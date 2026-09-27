@@ -19,3 +19,66 @@ h1,h2,h3{font-family:Poppins,sans-serif;line-height:1.15}h1{font-size:clamp(48px
 footer{border-top:1px solid var(--border);padding:25px 8%;display:flex;justify-content:space-between;color:#777;font-size:12px}footer a{color:#c06aff}.reveal{opacity:0;transform:translateY(25px);transition:.7s ease}.reveal.show{opacity:1;transform:none}.cursor-glow{position:fixed;width:250px;height:250px;pointer-events:none;border-radius:50%;background:radial-gradient(circle,rgba(151,65,255,.08),transparent 65%);transform:translate(-50%,-50%);z-index:-1}
 @media(max-width:850px){.header{padding:0 5%}nav{position:absolute;top:76px;left:0;width:100%;display:none;flex-direction:column;background:#0b0c17;padding:20px 8%;border-bottom:1px solid var(--border)}nav.open{display:flex}.menu-btn{display:block}.hero{grid-template-columns:1fr;text-align:center;padding-top:130px}.hero-text{margin:auto}.hero-buttons,.socials{justify-content:center}.hero-card{height:400px}.profile-placeholder{width:260px;height:320px}.orbit{display:none}.about-grid,.contact-box{grid-template-columns:1fr}.skills-grid,.project-grid{grid-template-columns:1fr 1fr}.contact-box{padding:30px}}
 @media(max-width:550px){.section{padding:85px 6%}.skills-grid,.project-grid,.stats{grid-template-columns:1fr}h1{font-size:48px}.hero h2{font-size:21px}.quick-info{grid-template-columns:1fr}.hero-card{height:360px}.profile-placeholder{width:230px;height:290px}.contact-box{gap:30px}footer{flex-direction:column;gap:10px}}
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+.hero-img {
+    position: relative;
+    z-index: 10;
+}
+.certificate-gallery {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.cert-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 120px; /* Adjust size based on preference */
+}
+
+.cert-link img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #333;
+    transition: transform 0.2s ease;
+}
+
+.cert-link img:hover {
+    transform: scale(1.05);
+    border-color: #a855f7; /* Matches your purple glow theme */
+}
+
+.cert-link span {
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-top: 5px;
+    text-align: center;
+}
+/* Container controlling the spacing */
+.cert-container {
+    margin-top: 15px;
+    max-width: 400px; /* Limits the maximum width of the certificate on the page */
+    width: 100%;       /* Makes it responsive on smaller mobile screens */
+}
+
+/* Image scaling rules */
+.cert-img {
+    width: 100%;       /* Spans perfectly across the 400px parent container */
+    height: auto;      /* Keeps the original aspect ratio so it doesn't look squished */
+    border-radius: 8px;/* Softens the edges to match modern UI aesthetics */
+    border: 1px solid #333; /* Gives a subtle boundary edge against the dark background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+}
+
+
